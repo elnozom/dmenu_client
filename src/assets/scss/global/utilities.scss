@@ -1,0 +1,29 @@
+html , body {
+    padding: 0;
+    margin:  0;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#app{
+    position: relative;
+}
+
+.view{
+    padding-top: calc( var(--nav-height) + 20px);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+.bottom-sheet__card{
+    min-height: 500px;
+}

@@ -1,0 +1,24 @@
+@media (min-width: 1000px) {
+  .home {
+    padding: 0 200px;
+  }
+}
+
+.groups {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.groups > div:not(:last-child) {
+  margin-right: 20px;
+}
+
+@media (min-width: 1000px) {
+  .items {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+/*# sourceMappingURL=home.css.map */

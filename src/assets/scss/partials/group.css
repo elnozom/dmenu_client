@@ -1,0 +1,37 @@
+.group {
+  width: 120px;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.group img {
+  width: 120px;
+  border-radius: 5px;
+  height: auto;
+}
+
+.group h3 {
+  text-align: center;
+  font-family: "Kufi";
+  font-size: 14px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.group.active h3 {
+  color: var(--primary);
+}
+
+.group.active h3::after {
+  content: "";
+  width: 100%;
+  display: block;
+  margin-top: 10px;
+  border-bottom: 1px solid var(--primary);
+}
+/*# sourceMappingURL=group.css.map */

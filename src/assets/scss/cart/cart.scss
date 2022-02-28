@@ -1,0 +1,32 @@
+.cart {
+    // padding: 20px;
+    position: relative;
+    &-items {
+        padding: 10px 20px 130px 20px;
+    }
+    & .totals {
+        bottom: 0;
+        width: 100%;
+        position: fixed;
+        background-color: #fff;
+        &__wrapper {
+            position: relative;
+
+            width: 100% ;
+            box-shadow: rgba(0, 0, 0, 0.5) 10px -3px 25px;
+            & .total-row {
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+                border-radius: 15px;
+                & span {
+                    font-size: 18px;
+                    font-weight: bold;
+                    &:last-child {
+                        color: var(--primary);
+                    }
+                }
+            }
+        }
+    }
+}

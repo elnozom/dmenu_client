@@ -1,0 +1,56 @@
+.cart-item{
+    display: flex;
+    box-shadow: var(--shadow);
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+    & .left{
+        display: flex;
+        & img{
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+    }
+    & .info{
+        & h3{
+            font-family: "Kufi";
+            margin-top: 0px;
+            margin-bottom: 5px;
+            font-family: "Kufi";
+            height: 30px;
+            overflow: hidden;
+    
+        }
+        & p{
+            margin: 0;
+            color: var(--primary);
+        }
+
+    }
+    & .qnt{
+        display: flex;
+        align-items: center;
+        color: var(--primary);
+        & input{
+            text-align: center;
+            width: 30px;
+            border: none;
+            font-size: 18px;
+            
+        }
+        & svg{
+            width: 25px;
+            height: 25px;
+        }
+    }
+    & .right{
+        text-align: center;
+        cursor: pointer;
+        & svg{
+            width: 30px;
+            height: 30px;
+            fill:var(--danger)
+        }
+    }
+}

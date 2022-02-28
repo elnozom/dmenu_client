@@ -1,0 +1,49 @@
+.nav{
+    background-color: var(--primary);
+    box-shadow: var(--shadow);
+    position: fixed;
+    top:0;
+    left: 0;
+    color: #fff;
+    z-index: 1;
+    height: var(--nav-height);
+    width: 100%;
+    &__wrapper{
+        height: var(--nav-height);
+        width: calc(100%  - 40px);
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    & .nav-cart{
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        & img{
+           
+            height: auto;
+        }
+        & .count{
+            position: absolute;
+            top: 0px;
+            right: 0;
+            background-color: rgb(7, 63, 63);
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        & svg{
+            width: 60px;
+            height: 60px;
+        }
+    }
+    & .action a{
+        background-color: rgb(87, 87, 209);
+        border-radius: 10px;
+        padding: 10px 20px;
+    }
+}

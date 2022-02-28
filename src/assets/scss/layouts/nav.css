@@ -1,0 +1,70 @@
+.nav {
+  background-color: var(--primary);
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #fff;
+  z-index: 1;
+  height: var(--nav-height);
+  width: 100%;
+}
+
+.nav__wrapper {
+  height: var(--nav-height);
+  width: calc(100%  - 40px);
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav .nav-cart {
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav .nav-cart img {
+  height: auto;
+}
+
+.nav .nav-cart .count {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  background-color: #073f3f;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav .nav-cart svg {
+  width: 60px;
+  height: 60px;
+}
+
+.nav .action a {
+  background-color: #5757d1;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+/*# sourceMappingURL=nav.css.map */
