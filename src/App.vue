@@ -4,6 +4,7 @@
     <app-nav @openCart="openCart"/>
     <div class="view">
       <router-view/>
+    <guest-modal/>
     </div>
     <bottom-sheet max-height="80%" ref="cart">
       <cart/>
@@ -14,14 +15,16 @@
 <script>
 import Vue from 'vue'
 import snack from '@/components/utils/snack.vue'
-import appNav from '@/components/layouts/appNav.vue'
+import AppNav from '@/components/layouts/appNav.vue'
+import GuestModal from '@/components/modals/guest.vue'
 import cart from '@/components/cart/cart.vue'
 import  VueBottomSheet from "@webzlodimir/vue-bottom-sheet";
 export default Vue.extend({
   components:{
     snack,
     "bottom-sheet": VueBottomSheet,
-    "app-nav" : appNav,
+    "app-nav" : AppNav,
+    "guest-modal" : GuestModal,
     cart
   },
   methods:{

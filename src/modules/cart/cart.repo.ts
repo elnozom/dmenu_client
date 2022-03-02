@@ -35,7 +35,6 @@ export default class CartRepo implements CartInerface{
             DeviceId: this.deviceId,
             TableSerial: this.table
         }
-        console.log(req)
         return new Promise((resolve ,reject) => {
             Http.post(`${this.prefix}` , req)
             .then((res:any) => {
@@ -71,6 +70,23 @@ export default class CartRepo implements CartInerface{
     deleteItem(serial: number): Promise<boolean> {
         return new Promise((resolve ,reject) => {
             Http.delete(`${this.prefix}/${serial}`)
+            .then((res:any) => {
+                resolve(res)
+            }).catch((e) => {
+                reject(e)
+            })
+        })
+    }
+
+
+    makeCall(Type : number): Promise<boolean> {
+        const body = {
+            CartSerial : this.cartSerial,
+            TableSerial : this.table,
+            Type,
+        }
+        return new Promise((resolve ,reject) => {
+            Http.post(`${this.prefix}/call/` , body)
             .then((res:any) => {
                 resolve(res)
             }).catch((e) => {

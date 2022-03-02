@@ -8,7 +8,8 @@
                 
             </div>
             <div class="action">
-                <a href="#" @click.prevent="callWaiter">call waiter</a>
+                <a href="#" @click.prevent="callWaiter(1)">Request Cheque</a>
+                <a href="#" @click.prevent="callWaiter(0)">call waiter</a>
             </div>
         </div>
     </div>
@@ -16,7 +17,18 @@
 <script lang="ts">
 import Vue from 'vue'
 import {mapGetters} from 'vuex'
+import CartRepo from "@/modules/cart/cart.repo";
+import {openSnack} from '@/core/snack'
 export default Vue.extend({
+    methods:{
+        callWaiter(type:number){
+            const repo =  CartRepo.getInstance();
+            repo.makeCall(type).then(() => {
+                const msg = 'Waiter will be here in a minute'
+                openSnack("success" ,msg)
+            })
+        }
+    },  
     computed:{
         ...mapGetters({
             'count' : 'cart/count',

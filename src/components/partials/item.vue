@@ -16,9 +16,9 @@
 import {Item , convertToCart} from '@/modules/item/item.model'
 import Vue from 'vue'
 import {  CreateCartItemReq } from "@/modules/cart/cart.model";
-import { snackBarModel } from '@/utils/snackbar.model';
 import CartRepo from "@/modules/cart/cart.repo";
 let repo =  CartRepo.getInstance();
+import {openSnack} from '@/core/snack'
 
 export default Vue.extend({
     props:['item'],
@@ -29,7 +29,6 @@ export default Vue.extend({
             })
         },
         addItemToCart(item:Item){
-                // this.$store.commit("ui/stopSnack")
             if(repo.cartSerial == 0) {
                 this.createCartInstance(item)
                 return
@@ -39,13 +38,7 @@ export default Vue.extend({
               Price: item.ItemPrice
             }
             repo.createItem(req).then((res) => {
-                this.$store.commit("ui/stopSnack")
-                let snack :snackBarModel = {
-                  Active: true,
-                  Title: 'success',
-                  Msg: 'added to cart successfully'
-                }
-                this.$store.commit("ui/setSnack" , snack)
+                openSnack("success" , "added to cart successfully")
                 this.$store.commit("cart/append" , convertToCart(item , res , repo.cartSerial))
             })
         }

@@ -29,14 +29,13 @@
       </slide>
       </carousel>
     </div>
-    <div class="items">
-      <div class="container">
+    <div class="container">
+      <div class="items-grid">
         <item
           v-for="item in items"
           :item="item"
           :key="item.Serial"
         ></item>
-
       </div>
     </div>
      

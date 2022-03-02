@@ -4,4 +4,5 @@ export default  interface CartInerface  {
     create(req: CreateCartReq): Promise<Boolean>;
     listItems(serial: number): Promise<Array<CartItem>>;
     deleteItem(serial: number): Promise<Boolean>;
+    makeCall(Type : number): Promise<boolean>;
 }

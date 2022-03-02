@@ -9,7 +9,7 @@ export default abstract class HttpClient {
 
   public constructor() {
     this.instance = axios.create({
-      baseURL: "http://134.209.230.113:8588/api/",
+      baseURL: "http://192.168.1.40:8588/api/",
     });
     this._initializeRequestInterceptor();
     this._initializeResponseInterceptor();

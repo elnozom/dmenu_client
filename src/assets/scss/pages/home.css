@@ -14,11 +14,22 @@
 }
 
 @media (min-width: 1000px) {
-  .items {
+  .items-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .items-grid {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
   }
 }
 /*# sourceMappingURL=home.css.map */
