@@ -9,6 +9,9 @@
     <bottom-sheet max-height="80%" ref="cart">
       <cart/>
     </bottom-sheet>
+    <div class="scroll-top">
+
+    </div>
    
   </div>
 </template>

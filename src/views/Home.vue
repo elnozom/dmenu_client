@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    
     <div class="groups">
       <carousel :perPage="3" :paginationEnabled="false">
         <slide v-for="group in groups"

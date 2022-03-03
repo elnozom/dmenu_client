@@ -1,3 +1,11 @@
+.fixed{
+    position: fixed;
+    background-color: #fff;
+    top: 70px;
+    padding: 20px 0;
+    
+}
+
 .home{
     @media(min-width:1000px){
         padding:  0 200px;
@@ -6,6 +14,16 @@
 .groups {
     overflow: hidden;
     margin-bottom: 20px;
+    padding-top: 200px;
+    &:first-child{
+        position: fixed;
+        background-color: #fff;
+        box-shadow: var(--shadow);
+        z-index: 20;
+        top: 70px;
+        padding-top: 20px;
+    }
+   
     & > div {
         &:not(:last-child) {
             margin-right: 20px;
@@ -13,6 +31,7 @@
     }
 }
 .items-grid{
+    // padding-top: 400px;
     @media(min-width:1000px){
         display: grid;
         grid-template-columns: repeat(3,1fr);

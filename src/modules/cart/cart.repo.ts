@@ -28,8 +28,6 @@ export default class CartRepo implements CartInerface{
         this.deviceId = val
     }
     create(): Promise<boolean> {
-        console.log("this.deviceId")
-        console.log(this.deviceId)
         let req: CreateCartReq =  {
             CustomerSerial: 0,
             DeviceId: this.deviceId,

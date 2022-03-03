@@ -7,5 +7,8 @@ export const getters: GetterTree<UiState, RootState> = {
   snackBar(state): snackBarModel {
     return state.snackBar;
   },
+  guestModal(state): boolean {
+    return state.guestModal;
+  },
 
 };
