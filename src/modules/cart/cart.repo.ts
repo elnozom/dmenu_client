@@ -1,6 +1,7 @@
 import CartInerface from "./cart.interface";
 import { CreateCartReq, CartItem , CreateCartItemReq } from "./cart.model";
 import Api from '@/utils/Api';
+import store from '../../store'
 const Http = Api.getInstance();
 
 
@@ -81,8 +82,10 @@ export default class CartRepo implements CartInerface{
         const body = {
             CartSerial : this.cartSerial,
             TableSerial : this.table,
+            GuestName : store.getters['guest/name'],
             Type,
         }
+        console.log(body)
         return new Promise((resolve ,reject) => {
             Http.post(`${this.prefix}/call/` , body)
             .then((res:any) => {

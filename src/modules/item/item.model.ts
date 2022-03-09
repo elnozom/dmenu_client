@@ -5,6 +5,7 @@ export type Item = {
     ItemPrice: number,
     ItemSerial: number,
     ItemName: String,
+    ImagePath: String,
     IsMod: boolean,
     MainModSerial: number,
     AddItems: String
@@ -20,6 +21,7 @@ export type MainGroup = {
 export type Group = {
     GroupCode: number,
     GroupName: string
+    ImagePath: string
 }
 
 

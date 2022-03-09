@@ -1,14 +1,12 @@
 <template>
-  <div id="app">
+  <div id="app" ref="app">
     <snack />
-    <app-nav @openCart="openCart"/>
-    <div class="view">
+    <app-nav/>
+    <div class="">
       <router-view/>
     <guest-modal/>
     </div>
-    <bottom-sheet max-height="80%" ref="cart">
-      <cart/>
-    </bottom-sheet>
+    
     <div class="scroll-top">
 
     </div>
@@ -34,6 +32,12 @@ export default Vue.extend({
     openCart() {
       this.$refs.cart.open();
     },
+  },
+  mounted(){
+    console.log('mn')
+    const modeProp = localStorage.getItem('mode')
+    const mode = modeProp ? modeProp : 'dark'
+    this.$refs.app.classList.add(mode)
   }
 })
 </script>

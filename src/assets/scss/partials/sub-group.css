@@ -1,0 +1,47 @@
+.sub-group {
+  border-radius: 25px;
+  background-position: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 140px;
+  color: #fff;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.46);
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  position: relative;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sub-group:hover {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+}
+
+.sub-group h4 {
+  z-index: 2;
+}
+
+.sub-group::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 26px;
+  background: #232d40;
+  opacity: .4;
+}
+/*# sourceMappingURL=sub-group.css.map */

@@ -1,0 +1,56 @@
+
+
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes leftIn {
+    from {transform: translateX(-200px)}
+    to {transform: translateX(-200px)}
+}
+@keyframes animWidth {
+    from {width:0}
+    to {width: 120px}
+}
+@keyframes animScale {
+    from {transform:scale(0);visibility: visible;}
+    to {transform:scale(1);visibility: visible;}
+}
+
+@keyframes animGroup {
+    0%  {
+        transform: translateX(200px );
+        width: 50%;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        width: 100%;
+        transform: translateX(0);
+
+    }
+}
+@keyframes animGroupOdd {
+    0%  {
+        transform: translateX(-200px);
+        width: 50%;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        width: 100%;
+        transform: translateX(0);
+
+    }
+}
+
+
+.sub-group-wrapper:nth-child(odd) .sub-group{
+    animation-delay:1s ;
+    animation: animGroupOdd 1s;
+}
+
+.sub-group-wrapper:nth-child(even) .sub-group{
+    animation: animGroup 1s;
+}

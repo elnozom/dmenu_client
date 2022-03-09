@@ -1,13 +1,23 @@
 <template>
     <div class="item">
+        <div class="img" @click.prevent="show">
+            <img :src="`http://134.209.230.113:8588/images/${$route.query.groupType}:${$route.query.group}:Default.jpg`" :alt="item.ItemName">
+        </div>
         <div class="info">
             <h3>{{item.ItemName}}</h3>
             <p>{{item.ItemDesc}}</p>
-            <p class="price">{{item.ItemPrice | price}}</p>
-            <a href="#" @click.prevent="addItemToCart(item)">add to cart</a>
-        </div>
-        <div class="img">
-            <img src="@/assets/img/i1.webp" :alt="item.ItemName">
+            <div class="info-bottom">
+                <p class="price">{{item.ItemPrice | price}}</p>
+                <a href="#" @click.prevent="addItemToCart(item)">
+                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 11v-11h1v11h11v1h-11v11h-1v-11h-11v-1h11z"/></svg>
+                </a>
+                <!-- <div class="qnt" v-else>
+                    <svg  class="qnt-svg" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M0 12v1h23v-1H0z"/></svg>
+                    <input class="qnt-input"  disabled v-model="item.Qnt">
+                    <svg class="qnt-svg" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 11v-11h1v11h11v1h-11v11h-1v-11h-11v-1h11z"/></svg>
+                </div> -->
+                
+            </div>
         </div>
     </div>
 </template>
@@ -19,10 +29,22 @@ import {  CreateCartItemReq } from "@/modules/cart/cart.model";
 import CartRepo from "@/modules/cart/cart.repo";
 let repo =  CartRepo.getInstance();
 import {openSnack} from '@/core/snack'
-
+import 'viewerjs/dist/viewer.css'
+import VueViewer from 'v-viewer'
+Vue.use(VueViewer)
 export default Vue.extend({
     props:['item'],
+    data(){
+        return {
+            inCart:false
+        }
+    },
     methods:{
+        show() {
+            this.$viewerApi({
+            images: ['https://oddmenu.com:3000/image/126628348688563.jpg'],
+            })
+        },
         createCartInstance(item : Item) {
             repo.create().then(() => {
                 this.addItemToCart(item);
@@ -39,6 +61,7 @@ export default Vue.extend({
             }
             repo.createItem(req).then((res) => {
                 openSnack("success" , "added to cart successfully")
+                this.inCart = true
                 this.$store.commit("cart/append" , convertToCart(item , res , repo.cartSerial))
             })
         }

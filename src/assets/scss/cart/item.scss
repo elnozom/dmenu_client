@@ -5,11 +5,14 @@
     justify-content: space-between;
     padding: 20px 10px;
     margin-bottom: 20px;
+    background-color: var(--color-white);
+    border-radius: 15px;
     & .left{
         display: flex;
         & img{
             margin-right: 20px;
             border-radius: 5px;
+            width: 100px;
         }
     }
     & .info{
@@ -20,6 +23,7 @@
             font-family: "Kufi";
             height: 30px;
             overflow: hidden;
+            color: var(--color-black);
     
         }
         & p{
@@ -37,6 +41,7 @@
             width: 30px;
             border: none;
             font-size: 18px;
+            background-color: var(--color-white-lighten);
             
         }
         & svg{

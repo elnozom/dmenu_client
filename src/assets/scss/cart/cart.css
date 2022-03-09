@@ -10,7 +10,8 @@
   bottom: 0;
   width: 100%;
   position: fixed;
-  background-color: #fff;
+  background-color: var(--color-white);
+  color: var(--color-black);
 }
 
 .cart .totals__wrapper {

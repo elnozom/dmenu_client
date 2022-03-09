@@ -1,6 +1,6 @@
-import { snackBarModel } from '@/utils/snackbar.model';
 import Vue from 'vue'
 import { RootState } from "./types";
+import { guest } from "./guest/index";
 import { ui } from "./ui/index";
 import { cart } from "./cart/index";
 import Vuex,  { StoreOptions } from 'vuex'
@@ -12,7 +12,8 @@ const store: StoreOptions<RootState> = {
   },
   modules: {
     ui,
-    cart
+    cart,
+    guest
   },
 };
 

@@ -1,43 +1,75 @@
 .item{
-    box-shadow: var(--shadow);
-    padding: 20px 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-    @media(min-width:1000px){
-        flex-direction: column-reverse;
-        justify-content: center;
-        text-align: center;
+    animation: animScale 1s;
+    // box-shadow: var(--shadow);
+    // padding: 20px 10px;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    // margin-bottom: 25px;
+    // @media(min-width:1000px){
+    //     flex-direction: column-reverse;
+    //     justify-content: center;
+    //     text-align: center;
         
+    // }
+    cursor: pointer;
+    transition:all .3s ;
+    &:hover{
+        transform: scale(1.02);
     }
     & img{
-        height: 100%;
-        border-radius:5px;
+        width: 100%;
+        border-radius:25px;
         height: auto;
     }
     & h3{
         margin-top: 0px;
         margin-bottom: 15px;
+        font-size: 16px;
         font-family: "Kufi";
-
+        margin-top: 15px;
     }
     & p{
        margin: 5px; 
        color: var(--p-color);
        &.price{
            color: var(--primary);
-        margin-bottom: 20px;
+           font-weight: 800;
+           font-size: 20px;
+            margin-bottom: 20px;
 
        }
     }
+    & .info-bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     & a{
         background-color: var(--primary);
-        padding: 10px 20px;
-        border-radius: 15px;
+        width:  40px;
+        height:  40px;
+        border-radius: 50%;
         color: #fff;
         text-align: center;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, .4) 2px 2px 20px;
+        animation-delay: 3s;
+        cursor: pointer;
+        transition: all .3s;
+       &:active{
+           box-shadow: none;
+       }
+        // visibility: hidden;
+        & svg{
+            fill: #fff;
+            & path{
+                fill: #fff !important;
+                font-weight: bold;
+              }
+        }
     }
 
     &.active{

@@ -1,7 +1,7 @@
 <template>
     <div class="group">
-        <img src="@/assets/img/g1.webp" :alt="group.GroupName">
-        <h3>{{group.GroupName}}</h3>
+        <!-- <img src="@/assets/img/g1.webp" :alt="group.GroupName"> -->
+        <h4>{{group.GroupName}}</h4>
     </div>
 </template>
 

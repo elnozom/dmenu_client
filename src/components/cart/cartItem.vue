@@ -1,7 +1,7 @@
 <template>
     <div class="cart-item">
         <div class="left">
-            <img src="@/assets/img/i1.webp" :alt="item.ItemName">
+            <img :src="`http://134.209.230.113:8588/images/${$route.query.groupType}:${$route.query.group}:Default.jpg`" :alt="item.ItemName">
             <div class="info">
                 <h3>{{item.ItemName}}</h3>
                 <p class="price">{{item.Price | price}}</p>
@@ -20,10 +20,9 @@
 </template>
 
 <script lang="ts">
-import {Item} from '@/modules/item/item.model'
 import CartRepo from "@/modules/cart/cart.repo";
 import Vue from 'vue'
-import {CartItem, CreateCartItemReq } from "@/modules/cart/cart.model";
+import {CartItem } from "@/modules/cart/cart.model";
 import { snackBarModel } from '@/utils/snackbar.model';
     
     

@@ -16,10 +16,10 @@
                         <span>subtotal:</span>
                         <span>{{totals.Subtotal | price}}</span>
                     </div>
-                    <div class="total-row">
+                    <!-- <div class="total-row">
                         <span>tax:</span>
                         <span>{{totals.Tax | price}}</span>
-                    </div>
+                    </div> -->
                     <div class="total-row">
                         <span>total:</span>
                         <span>{{totals.Total | price}}</span>

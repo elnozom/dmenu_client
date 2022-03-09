@@ -1,14 +1,13 @@
 <template>
-  <div>
+  <div :class="{'isForm' : isForm}" class="asdasd">
     <simple-modal
       v-model="active"
       :title="`Welcome ${name}`"
     >
-      <template slot="body">
-
+      <template slot="body" v-if="isForm"> 
         <div
           class="form"
-          v-if="isForm"
+          
         >
           <form class="guest-form">
             <div class="input">
@@ -59,11 +58,18 @@ export default {
         this.$store.commit("ui/setGuestModal", val);
       },
     },
+    name: {
+      get: function () {
+        return this.$store.getters["guest/name"];
+      },
+      set: function (val) {
+        this.$store.commit("guest/setName", val);
+      },
+    },
   },
   data() {
     return {
       isForm: false,
-      name: "",
       form: {
         GuestName: "",
         GuestPhone: "",
@@ -85,9 +91,9 @@ export default {
       });
     },
     find() {
+      if(this.name != '') return
       let deviceId = new DeviceUUID().get();
       repo.findByDevice(deviceId).then((res) => {
-        console.log(res);
         this.name = res.GuestName;
         this.isForm = res.GuestName == "";
       });
@@ -102,5 +108,24 @@ export default {
 <style>
 .form {
   display: flex;
+}
+.vsm-modal-body{
+  display: none;
+  background-color: var(--color-white);
+}
+.guest-input{
+  background-color: var(--color-white-lighten);
+  color: var(--colors-font);
+  height: 30px;
+  border: none;
+  border-radius: 15px;
+  padding-left: 20px;
+}
+.isForm .vsm-modal-body{
+  display: block !important;
+}
+.vsm-modal-header{
+  background-color:var(--color-white-lighten) !important ;
+  color : var(--color-black);
 }
 </style>

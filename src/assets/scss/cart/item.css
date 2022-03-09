@@ -12,6 +12,8 @@
           justify-content: space-between;
   padding: 20px 10px;
   margin-bottom: 20px;
+  background-color: var(--color-white);
+  border-radius: 15px;
 }
 
 .cart-item .left {
@@ -23,6 +25,7 @@
 .cart-item .left img {
   margin-right: 20px;
   border-radius: 5px;
+  width: 100px;
 }
 
 .cart-item .info h3 {
@@ -32,6 +35,7 @@
   font-family: "Kufi";
   height: 30px;
   overflow: hidden;
+  color: var(--color-black);
 }
 
 .cart-item .info p {
@@ -54,6 +58,7 @@
   width: 30px;
   border: none;
   font-size: 18px;
+  background-color: var(--color-white-lighten);
 }
 
 .cart-item .qnt svg {

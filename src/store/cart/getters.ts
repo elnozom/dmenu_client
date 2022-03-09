@@ -11,6 +11,7 @@ export const getters: GetterTree<CartState, RootState> = {
   items(state): Array<CartItem> {
     return state.items == null ? [] : state.items;
   },
+  
   count(state):number{
     return  state.items == null ? 0 : state.items.length
   },
@@ -22,13 +23,16 @@ export const getters: GetterTree<CartState, RootState> = {
     state.items.map((item : CartItem) => {
       subtotal += item.Price
     })
-    tax = subtotal * .14
+    tax = subtotal * 0
     total = subtotal + tax
     return {
       Subtotal :subtotal,
       Tax:tax,
       Total:total,
     }
+  },
+  cartEmpty(state) : boolean {
+    return state.items == null;
   }
   // totals(state):TotalsModel{
   //   return state.totals;

@@ -1,53 +1,78 @@
 .nav{
-    background-color: var(--primary);
-    box-shadow: var(--shadow);
-    position: fixed;
-    top:0;
-    left: 0;
-    color: #fff;
-    z-index: 1;
-    height: var(--nav-height);
-    width: 100%;
-    &__wrapper{
-        height: var(--nav-height);
-        width: calc(100%  - 40px);
-        margin: auto;
+   
+    header{
+        height: 250px;
+        background-image: url('../../img/header.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+    .btns{
         display: flex;
         justify-content: space-between;
-        align-items: center;
-    }
-    & .nav-cart{
-        position: relative;
-        cursor: pointer;
-        display: flex;
-        & img{
-           
-            height: auto;
+        // position: absolute;
+        top: 0;
+      
+        color: #fff;
+        padding: 10px 20px ;
+          & a {
+            
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            & img{
+                width: 50px;
+            }
         }
-        & .count{
-            position: absolute;
-            top: 0px;
-            right: 0;
-            background-color: rgb(7, 63, 63);
-            width: 25px;
-            height: 25px;
+    }
+    & .header__wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-items: center;
+        background-position: center;
+        position: relative;
+        height: 150px;
+        & .logo{
+            width: 70px;
+            height: 70px;
+            background-color: var(--color-white);
+            box-shadow: var(--shadow);
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-        & svg{
-            width: 60px;
-            height: 60px;
-        }
-    }
-    & .action a{
-        background-color: rgb(87, 87, 209);
-        border-radius: 10px;
-        padding: 10px 20px;
 
-        &:not(:last-child){
-            margin-right: 20px;
+            & svg{
+                fill: var(--color-black);
+            }
         }
+        & .controllers{
+            position: absolute;
+            color: #fff;
+            right: 0;
+            bottom: 30px;
+            display: flex;
+            & > div{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                &:first-child{
+                    margin-right: 20px;
+                }
+                & svg{
+                    width:40px;
+                    fill: #fff;
+    
+                }
+            }
+        }
+
     }
 }
