@@ -11,5 +11,11 @@ export const mutations: MutationTree<UiState> = {
     },
     stopSnack: state => {
         state.snackBar.Active = false
+    },
+    setMainGroup: (state , val) => {
+        state.mainGroup = val
+    },
+    setSubGroup: (state , val) => {
+        state.subGroup = val
     }
 };

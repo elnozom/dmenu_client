@@ -10,5 +10,11 @@ export const getters: GetterTree<UiState, RootState> = {
   guestModal(state): boolean {
     return state.guestModal;
   },
+  mainGroup(state): string {
+    return state.mainGroup;
+  },
+  subGroup(state): string | null {
+    return state.subGroup;
+  },
 
 };

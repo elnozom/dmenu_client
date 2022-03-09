@@ -138,12 +138,14 @@ export default Vue.extend({
       this.activeGroup = group;
       this.showItems = false
       repo.setMainGroup(group);
+      this.$store.commit('ui/setMainGroup' , group.toString())
       this.listGroups();
     },
     setSubGroup(group , name) {
       pushParams(this.$route , {group})
       repo.setSubGroup(group);
       this.subGroupName = name
+      this.$store.commit('ui/setSubGroup' , group.toString())
       this.showItems = true
       this.listItems();
     },

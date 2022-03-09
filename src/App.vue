@@ -36,7 +36,7 @@ export default Vue.extend({
   mounted(){
     console.log('mn')
     const modeProp = localStorage.getItem('mode')
-    const mode = modeProp ? modeProp : 'dark'
+    const mode = modeProp ? modeProp : 'light'
     this.$refs.app.classList.add(mode)
   }
 })

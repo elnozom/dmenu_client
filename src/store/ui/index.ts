@@ -8,6 +8,8 @@ import { RootState } from '../types';
 export const state: UiState = {
     loading: true,
     guestModal: true,
+    mainGroup: "1",
+    subGroup: null,
     snackBar:{
         Active : false,
         Title : "",

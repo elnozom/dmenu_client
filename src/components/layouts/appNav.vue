@@ -34,12 +34,12 @@
         </header>
     </div>
 </template>
-<script lang="ts">
+<script >
 import Vue from 'vue'
 import {mapGetters} from 'vuex'
 import CartRepo from "@/modules/cart/cart.repo";
 import {openSnack} from '@/core/snack'
-import pushParams from '@/core/params.js'
+import pushParams from '@/core/params'
 export default Vue.extend({
     methods:{
         toggleMode(){
@@ -52,7 +52,7 @@ export default Vue.extend({
                 app.classList.add(next)
             }
         },  
-        callWaiter(type:number){
+        callWaiter(type){
             const urlCalled = this.$route.query.calledAt
             if(urlCalled && type == 0) {
                 console.log(urlCalled)
