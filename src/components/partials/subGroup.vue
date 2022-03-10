@@ -1,5 +1,5 @@
 <template>
-    <div class="sub-group" :style="`background-image: url('https://elrady.co/${$store.getters['ui/mainGroup']}:${group.GroupCode}:Default.jpg');`">
+    <div class="sub-group" :style="`background-image: url('https://elrady.co/images/${$store.getters['ui/mainGroup']}:${group.GroupCode}:Default.jpg');`">
         <h4>{{group.GroupName}}</h4>
     </div>
 </template>
