@@ -16,6 +16,9 @@
             margin-bottom: 30px;
             animation: fadeIn 1s;
             color: var(--color-black);
+            & img {
+                width: 150px;
+            }
 
             & .info-grid {
                 display: grid;

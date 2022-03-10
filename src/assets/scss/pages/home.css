@@ -23,6 +23,10 @@
   color: var(--color-black);
 }
 
+.home .items_wrapper .info img {
+  width: 150px;
+}
+
 .home .items_wrapper .info .info-grid {
   display: -ms-grid;
   display: grid;
