@@ -1,7 +1,7 @@
 <template>
     <div class="cart-item">
         <div class="left">
-            <img :src="`http://134.209.230.113:8588/images/${$route.query.groupType}:${$route.query.group}:Default.jpg`" :alt="item.ItemName">
+            <img :src="`https://elrady.co/images/${$store.getters['ui/mainGroup']}:${$store.getters['ui/subGroup']}:Default.jpg`" :alt="item.ItemName">
             <div class="info">
                 <h3>{{item.ItemName}}</h3>
                 <p class="price">{{item.Price | price}}</p>

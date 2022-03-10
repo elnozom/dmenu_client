@@ -1,7 +1,7 @@
 <template>
     <div class="item">
         <div class="img" @click.prevent="show">
-            <img :src="`http://134.209.230.113:8588/images/${$store.getters['ui/mainGroup']}:${$store.getters['ui/subGroup']}:Default.jpg`" :alt="item.ItemName">
+            <img :src="`https://elrady.co/images/${$store.getters['ui/mainGroup']}:${$store.getters['ui/subGroup']}:Default.jpg`" :alt="item.ItemName">
         </div>
         <div class="info">
             <h3>{{item.ItemName}}</h3>
