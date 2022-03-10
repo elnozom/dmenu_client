@@ -27,7 +27,7 @@
 
           <div class="main-groups">
             <carousel
-              :perPage="3"
+              :perPage="2"
               :paginationEnabled="false"
             >
               <slide

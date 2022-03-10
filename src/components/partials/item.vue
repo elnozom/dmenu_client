@@ -1,6 +1,6 @@
 <template>
     <div class="item">
-        <div class="img" @click.prevent="show">
+        <div class="img" >
             <img :src="`https://api.elrady.co/images/${$store.getters['ui/mainGroup']}:${$store.getters['ui/subGroup']}:Default.jpg`" :alt="item.ItemName">
         </div>
         <div class="info">
@@ -45,11 +45,11 @@ export default Vue.extend({
        this.groupType = this.$route.query.groupType  ? this.$route.query.groupType as string : "1"
     },
     methods:{
-        show() {
-            this.$viewerApi({
-            images: ['https://oddmenu.com:3000/image/126628348688563.jpg'],
-            })
-        },
+        // show() {
+        //     this.$viewerApi({
+        //     images: ['https://oddmenu.com:3000/image/126628348688563.jpg'],
+        //     })
+        // },
         createCartInstance(item : Item) {
             repo.create().then(() => {
                 this.addItemToCart(item);
