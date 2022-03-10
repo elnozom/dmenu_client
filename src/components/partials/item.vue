@@ -1,7 +1,7 @@
 <template>
     <div class="item">
         <div class="img" >
-            <img :src="`https://api.elrady.co/images/${$store.getters['ui/mainGroup']}:${$store.getters['ui/subGroup']}:Default.jpg`" :alt="item.ItemName">
+            <img :src="`https://elrady.co/images/${$store.getters['ui/mainGroup']}:${$store.getters['ui/subGroup']}:Default.jpg`" :alt="item.ItemName">
         </div>
         <div class="info">
             <h3>{{item.ItemName}}</h3>
