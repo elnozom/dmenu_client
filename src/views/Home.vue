@@ -6,7 +6,7 @@
           <div class="info">
             <img src="@/assets/logo-2.png" alt="">
             <h2 class="title">
-              Wave digital menu
+              aboali digital menu
             </h2>
               <p class="header-info">
                 
