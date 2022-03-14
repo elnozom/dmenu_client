@@ -87,7 +87,16 @@ a {
     border-radius: 12px 12px 0 0;
 
 }
-
+.skelton {
+    cursor: progress; 
+    background: 
+    linear-gradient(0.25turn, transparent, var(--color-white), transparent),
+    linear-gradient(var(--color-white-lighten), var(--color-white-lighten)),
+    radial-gradient(38px circle at 19px 19px, var(--color-white-lighten) 50%, transparent 51%),
+    linear-gradient(var(--color-white-lighten), var(--color-white-lighten));
+    background-repeat: no-repeat;
+    animation: loading 1.5s infinite;
+  }
 .bottom-sheet__content{
     background-color: var(--color-white-lighten);
 }
