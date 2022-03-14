@@ -1,5 +1,7 @@
 <template>
-    <div class="item">
+<div>
+    <div class="item-skelton skelton" v-if="loading"></div>
+    <div class="item" v-else>
         <div class="img" >
             <img :src="`https://elrady.co/images/${$store.getters['ui/mainGroup']}:${$store.getters['ui/subGroup']}:Default.jpg`" :alt="item.ItemName">
         </div>
@@ -20,6 +22,7 @@
             </div>
         </div>
     </div>
+</div>
 </template>
 
 <script lang="ts">
@@ -33,7 +36,7 @@ import 'viewerjs/dist/viewer.css'
 import VueViewer from 'v-viewer'
 Vue.use(VueViewer)
 export default Vue.extend({
-    props:['item'],
+    props:['item' , 'loading'],
     data(){
         const groupType:string = "1"
         return {

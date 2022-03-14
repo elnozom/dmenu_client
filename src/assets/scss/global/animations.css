@@ -142,15 +142,15 @@
   }
 }
 
-.sub-group-wrapper:nth-child(odd) .sub-group {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation: animGroupOdd 1s;
-          animation: animGroupOdd 1s;
+@-webkit-keyframes loading {
+  to {
+    background-position: 315px 0, 0 0, 0 190px, 50px 195px;
+  }
 }
 
-.sub-group-wrapper:nth-child(even) .sub-group {
-  -webkit-animation: animGroup 1s;
-          animation: animGroup 1s;
+@keyframes loading {
+  to {
+    background-position: 315px 0, 0 0, 0 190px, 50px 195px;
+  }
 }
 /*# sourceMappingURL=animations.css.map */

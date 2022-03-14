@@ -9,7 +9,7 @@ export default abstract class HttpClient {
 
   public constructor() {
     this.instance = axios.create({
-      baseURL: "https://elrady.co/api/",
+      baseURL:  process.env.VUE_APP_API_URL,
     });
     this._initializeRequestInterceptor();
     this._initializeResponseInterceptor();
@@ -17,7 +17,6 @@ export default abstract class HttpClient {
 
   private _handleRequest = (config: AxiosRequestConfig) => {
     const token = localStorage.getItem('token')
-    // const token = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MzkwNTE5MDgsImlkIjoxfQ.l9_Gq6dRyCfiKlE2WLnIIrUQ1crFLsy8VqwIYFvlwy4`
     config.headers['Authorization'] = `Bearer ${token}`;
 
     return config;

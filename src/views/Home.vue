@@ -6,7 +6,7 @@
           <div class="info">
             <img src="@/assets/logo-2.png" alt="">
             <h2 class="title">
-              Wave digital menu
+              aboali digital menu
             </h2>
               <p class="header-info">
                 
@@ -57,7 +57,7 @@
               :key="group.GroupCode"
               @click="setSubGroup(group.GroupCode , group.GroupName)"
             >
-              <sub-group :group="group"></sub-group>
+              <sub-group :loading="subGroupLoading" :group="group"></sub-group>
             </a>
           </div>
           <div class="items" v-else>
@@ -65,6 +65,7 @@
             <item
               v-for="item in items"
               :item="item"
+              :loading="itemsLoading"
               :key="item.Serial"
             ></item>
           </div>
@@ -157,20 +158,31 @@ export default Vue.extend({
     },
 
     listGroups() {
+      this.subGroupLoading = true
       repo.listGroups(group).then((groups) => {
         this.subGroups = groups
         let urlGroup = this.$route.query.group
         if(urlGroup) this.setSubGroup(urlGroup)
+        setTimeout(() => {
+          this.subGroupLoading = false
+
+        }, 1000);
       });
     },
     listItems() {
+      this.itemsLoading = true
       repo.listItems().then((items) => {
         this.items = items;
+        setTimeout(() => {
+          this.itemsLoading = false
+        }, 1000);
       });
     },
   },
   data() {
     return {
+      subGroupLoading:true,
+      itemsLoading:true,
       carouselOptions: {
         navButtons: false,
         dots: false,
@@ -191,7 +203,6 @@ export default Vue.extend({
     cartRepo.setDevice(deviceId);
     cartRepo.setTable(this.table);
     cartRepo.listItems().then((res) => {
-      console.log("hi");
       this.$store.commit("cart/init", res);
     });
   },

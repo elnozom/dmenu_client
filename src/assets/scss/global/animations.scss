@@ -45,12 +45,9 @@
     }
 }
 
-
-.sub-group-wrapper:nth-child(odd) .sub-group{
-    animation-delay:1s ;
-    animation: animGroupOdd 1s;
-}
-
-.sub-group-wrapper:nth-child(even) .sub-group{
-    animation: animGroup 1s;
-}
+@keyframes loading {  
+    to {
+      background-position: 315px 0, 0 0, 0 190px, 50px 195px;
+    }
+  }
+  

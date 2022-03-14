@@ -1,4 +1,4 @@
-.sub-group {
+.sub-group, .sub-group-skelton {
   border-radius: 25px;
   background-position: 50%;
   display: -webkit-box;
@@ -24,16 +24,16 @@
   background-repeat: no-repeat;
 }
 
-.sub-group:hover {
+.sub-group:hover, .sub-group-skelton:hover {
   -webkit-transform: scale(1.04);
           transform: scale(1.04);
 }
 
-.sub-group h4 {
+.sub-group h4, .sub-group-skelton h4 {
   z-index: 2;
 }
 
-.sub-group::before {
+.sub-group::before, .sub-group-skelton::before {
   content: "";
   position: absolute;
   left: 0;
