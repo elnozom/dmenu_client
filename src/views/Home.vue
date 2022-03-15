@@ -122,7 +122,7 @@ export default Vue.extend({
   computed: {
     table: {
       get: function () {
-        return parseInt(this.$route.params.table);
+        return this.$route.params.table ? parseInt(this.$route.params.table) : 0;
       },
     },
     ...mapGetters({

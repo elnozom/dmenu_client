@@ -4,7 +4,7 @@
     <div class="nav">
         <header>
             <div class="container">
-                <div class="btns">
+                <div class="btns" v-if="$route.name != 'initial'">
                     <a href="#" @click.prevent="callWaiter(0)">
                         <img src="@/assets/img/waiter.png">
                         <span>waiter</span>
