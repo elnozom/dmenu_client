@@ -21,7 +21,7 @@
   color: var(--color-black);
 }
 
-.home .items_wrapper .info svg {
+.home .items_wrapper .info svg.logo {
   width: 150px;
   height: 100px;
   fill: var(--color-black);
