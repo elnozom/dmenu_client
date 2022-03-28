@@ -16,8 +16,11 @@
             margin-bottom: 30px;
             animation: fadeIn 1s;
             color: var(--color-black);
-            & img {
+            & svg {
                 width: 150px;
+                height: 100px;
+                fill: var(--color-black);
+                transition:all .3s ease;
             }
 
             & .info-grid {

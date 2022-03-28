@@ -1,19 +1,18 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
-import First from '../views/First.vue'
 
 Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
   {
     path: '/',
-    name: 'First',
-    component: First
+    name: 'initial',
+    component: Home
   },
   {
     path: '/:table',
-    name: 'Home',
+    name: 'table',
     component: Home
   },
   {
