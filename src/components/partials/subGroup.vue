@@ -2,7 +2,7 @@
     <div>
     <div v-if="loading" class="sub-group-skelton skelton" >
     </div>
-    <div v-else class="sub-group" :style="`background-image: url('https://elrady.co/images/${$store.getters['ui/mainGroup']}:${group.GroupCode}:Default.jpg');`">
+    <div v-else class="sub-group" :style="`background-image: url('${imgPath}${$store.getters['ui/mainGroup']}:${group.GroupCode}:Default.jpg');`">
         <h4>{{group.GroupName}}</h4>
     </div>
 
@@ -16,7 +16,8 @@ export default Vue.extend({
     data(){
         const groupType:string = "1"
         return {
-            groupType 
+            groupType ,
+            imgPath : process.env.VUE_APP_IMG_URL
         }
     },
     mounted(){

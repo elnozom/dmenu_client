@@ -15,11 +15,6 @@ const routes: Array<RouteConfig> = [
     name: 'table',
     component: Home
   },
-  {
-    path: '/about',
-    name: 'About',
-    component: () => import('../views/About.vue')
-  }
 ]
 
 const router = new VueRouter({

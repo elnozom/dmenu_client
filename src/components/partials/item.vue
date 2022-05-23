@@ -3,7 +3,7 @@
     <div class="item-skelton skelton" v-if="loading"></div>
     <div class="item" v-else>
         <div class="img" >
-            <img :src="`https://elrady.co/images/${$store.getters['ui/mainGroup']}:${$store.getters['ui/subGroup']}:Default.jpg`" :alt="item.ItemName">
+            <img :src="`${imgPath}${$store.getters['ui/mainGroup']}:${$store.getters['ui/subGroup']}:Default.jpg`" :alt="item.ItemName">
         </div>
         <div class="info">
             <h3>{{item.ItemName}}</h3>
@@ -41,6 +41,7 @@ export default Vue.extend({
         const groupType:string = "1"
         return {
             inCart:false,
+            imgPath : process.env.VUE_APP_IMG_URL,
             groupType
         }
     },
