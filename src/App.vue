@@ -1,6 +1,6 @@
 <template>
   <div id="app" ref="app">
-    <snack />
+    <snack/>
     <app-nav/>
     <div class="">
       <router-view/>
