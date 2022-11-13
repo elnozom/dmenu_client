@@ -31,7 +31,6 @@ a {
   width: 100%;
   padding: 20px;
 }
-
 .input input {
   width: 100%;
 }
@@ -49,16 +48,9 @@ a {
 
 .guest-form {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   gap: 20px;
 }
 
@@ -67,12 +59,8 @@ a {
 }
 
 .qnt {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: var(--primary);
 }
 
@@ -98,7 +86,6 @@ a {
 
 .skelton {
   cursor: progress;
-  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(var(--color-white)), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(var(--color-white-lighten)), to(var(--color-white-lighten))), radial-gradient(38px circle at 19px 19px, var(--color-white-lighten) 50%, transparent 51%), -webkit-gradient(linear, left top, left bottom, from(var(--color-white-lighten)), to(var(--color-white-lighten)));
   background: linear-gradient(0.25turn, transparent, var(--color-white), transparent), linear-gradient(var(--color-white-lighten), var(--color-white-lighten)), radial-gradient(38px circle at 19px 19px, var(--color-white-lighten) 50%, transparent 51%), linear-gradient(var(--color-white-lighten), var(--color-white-lighten));
   background-repeat: no-repeat;
   -webkit-animation: loading 1.5s infinite;
@@ -107,5 +94,4 @@ a {
 
 .bottom-sheet__content {
   background-color: var(--color-white-lighten);
-}
-/*# sourceMappingURL=utilities.css.map */
+}/*# sourceMappingURL=utilities.css.map */

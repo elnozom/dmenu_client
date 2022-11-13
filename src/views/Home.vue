@@ -132,7 +132,7 @@ export default Vue.extend({
   },
   methods: {
     setMainGroup(group) {
-      pushParams(this.$route , {groupType : group} , 'group')
+      pushParams(this.$route , {pc : group} , 'cc')
       this.activeGroup = group;
       this.showItems = false
       repo.setMainGroup(group);
@@ -140,7 +140,7 @@ export default Vue.extend({
       this.listGroups();
     },
     setSubGroup(group , name) {
-      pushParams(this.$route , {group})
+      pushParams(this.$route , {cc : group})
       repo.setSubGroup(group);
       this.subGroupName = name
       this.$store.commit('ui/setSubGroup' , group.toString())
@@ -151,8 +151,8 @@ export default Vue.extend({
     listMainGroups() {
       repo.listMainGroups().then((groups) => {
         this.groups = groups;
-        let urlGroupType = this.$route.query.groupType
-        const code = urlGroupType ? urlGroupType : groups[0].GroupCode
+        let urlpc = this.$route.query.pc
+        const code = urlpc ? urlpc : groups[0].GroupCode
         this.setMainGroup(code);
         this.listGroups();
       });
@@ -162,7 +162,7 @@ export default Vue.extend({
       this.subGroupLoading = true
       repo.listGroups(group).then((groups) => {
         this.subGroups = groups
-        let urlGroup = this.$route.query.group
+        let urlGroup = this.$route.query.cc
         if(urlGroup) this.setSubGroup(urlGroup)
         setTimeout(() => {
           this.subGroupLoading = false

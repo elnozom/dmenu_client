@@ -1,33 +1,21 @@
 .cart-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  box-shadow: var(--shadow);
+  align-items: center;
+  justify-content: space-between;
   padding: 20px 10px;
   margin-bottom: 20px;
   background-color: var(--color-white);
   border-radius: 15px;
 }
-
 .cart-item .left {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .cart-item .left img {
   margin-right: 20px;
   border-radius: 5px;
   width: 100px;
 }
-
 .cart-item .info h3 {
   font-family: "Kufi";
   margin-top: 0px;
@@ -37,22 +25,15 @@
   overflow: hidden;
   color: var(--color-black);
 }
-
 .cart-item .info p {
   margin: 0;
   color: var(--primary);
 }
-
 .cart-item .qnt {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: var(--primary);
 }
-
 .cart-item .qnt input {
   text-align: center;
   width: 30px;
@@ -60,20 +41,16 @@
   font-size: 18px;
   background-color: var(--color-white-lighten);
 }
-
 .cart-item .qnt svg {
   width: 25px;
   height: 25px;
 }
-
 .cart-item .right {
   text-align: center;
   cursor: pointer;
 }
-
 .cart-item .right svg {
   width: 30px;
   height: 30px;
   fill: var(--danger);
-}
-/*# sourceMappingURL=item.css.map */
+}/*# sourceMappingURL=item.css.map */

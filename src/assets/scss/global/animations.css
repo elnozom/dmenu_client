@@ -6,7 +6,6 @@
     opacity: 1;
   }
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -15,29 +14,22 @@
     opacity: 1;
   }
 }
-
 @-webkit-keyframes leftIn {
   from {
-    -webkit-transform: translateX(-200px);
-            transform: translateX(-200px);
+    transform: translateX(-200px);
   }
   to {
-    -webkit-transform: translateX(-200px);
-            transform: translateX(-200px);
+    transform: translateX(-200px);
   }
 }
-
 @keyframes leftIn {
   from {
-    -webkit-transform: translateX(-200px);
-            transform: translateX(-200px);
+    transform: translateX(-200px);
   }
   to {
-    -webkit-transform: translateX(-200px);
-            transform: translateX(-200px);
+    transform: translateX(-200px);
   }
 }
-
 @-webkit-keyframes animWidth {
   from {
     width: 0;
@@ -46,7 +38,6 @@
     width: 120px;
   }
 }
-
 @keyframes animWidth {
   from {
     width: 0;
@@ -55,102 +46,81 @@
     width: 120px;
   }
 }
-
 @-webkit-keyframes animScale {
   from {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
     visibility: visible;
   }
   to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     visibility: visible;
   }
 }
-
 @keyframes animScale {
   from {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
     visibility: visible;
   }
   to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     visibility: visible;
   }
 }
-
 @-webkit-keyframes animGroup {
   0% {
-    -webkit-transform: translateX(200px);
-            transform: translateX(200px);
+    transform: translateX(200px);
     width: 50%;
     opacity: 0;
   }
   100% {
     opacity: 1;
     width: 100%;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
 }
-
 @keyframes animGroup {
   0% {
-    -webkit-transform: translateX(200px);
-            transform: translateX(200px);
+    transform: translateX(200px);
     width: 50%;
     opacity: 0;
   }
   100% {
     opacity: 1;
     width: 100%;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
 }
-
 @-webkit-keyframes animGroupOdd {
   0% {
-    -webkit-transform: translateX(-200px);
-            transform: translateX(-200px);
+    transform: translateX(-200px);
     width: 50%;
     opacity: 0;
   }
   100% {
     opacity: 1;
     width: 100%;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
 }
-
 @keyframes animGroupOdd {
   0% {
-    -webkit-transform: translateX(-200px);
-            transform: translateX(-200px);
+    transform: translateX(-200px);
     width: 50%;
     opacity: 0;
   }
   100% {
     opacity: 1;
     width: 100%;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
 }
-
 @-webkit-keyframes loading {
   to {
     background-position: 315px 0, 0 0, 0 190px, 50px 195px;
   }
 }
-
 @keyframes loading {
   to {
     background-position: 315px 0, 0 0, 0 190px, 50px 195px;
   }
-}
-/*# sourceMappingURL=animations.css.map */
+}/*# sourceMappingURL=animations.css.map */

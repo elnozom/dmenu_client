@@ -9,7 +9,8 @@
     animation: animWidth 1s ;
     transition: all .3s ease-in;
     height: 40px;
-    width: 100px;
+    margin: 0 10px;
+    // width: 100px;
     padding: 0;
     & h4{
         animation-delay: 1s;

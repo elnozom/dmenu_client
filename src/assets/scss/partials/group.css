@@ -2,25 +2,17 @@
   border: 2px solid var(--primary);
   border-radius: 25px;
   background-color: var(--color-white);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin-right: 3px;
   -webkit-animation: animWidth 1s;
           animation: animWidth 1s;
-  -webkit-transition: all .3s ease-in;
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
   height: 40px;
-  width: 100px;
+  margin: 0 10px;
   padding: 0;
 }
-
 .group h4 {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
@@ -29,12 +21,9 @@
   margin: 0;
   color: var(--color-black);
 }
-
 .group.active {
   background-color: var(--primary);
 }
-
 .group.active h4 {
   color: #fff;
-}
-/*# sourceMappingURL=group.css.map */
+}/*# sourceMappingURL=group.css.map */

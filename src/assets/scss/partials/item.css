@@ -1,20 +1,15 @@
 .item {
   cursor: pointer;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  transition: all 0.3s;
 }
-
 .item:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  transform: scale(1.02);
 }
-
 .item img {
   width: 100%;
   border-radius: 25px;
   height: auto;
 }
-
 .item h3 {
   margin-top: 0px;
   margin-bottom: 15px;
@@ -22,31 +17,21 @@
   font-family: "Kufi";
   margin-top: 15px;
 }
-
 .item p {
   margin: 5px;
   color: var(--p-color);
 }
-
 .item p.price {
   color: var(--primary);
   font-weight: 800;
   font-size: 20px;
   margin-bottom: 20px;
 }
-
 .item .info-bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .item a {
   background-color: var(--primary);
   width: 40px;
@@ -54,42 +39,28 @@
   border-radius: 50%;
   color: #fff;
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 2px 2px 20px;
-          box-shadow: rgba(0, 0, 0, 0.4) 2px 2px 20px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.4) 2px 2px 20px;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
   cursor: pointer;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  transition: all 0.3s;
 }
-
 .item a:active {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
 .item a svg {
   fill: #fff;
 }
-
 .item a svg path {
   fill: #fff !important;
   font-weight: bold;
 }
-
 .item.active h3 {
   color: var(--primary);
 }
-
 .item.active h3::after {
   content: "";
   width: 100%;
@@ -103,5 +74,4 @@
   height: 250px;
   margin-bottom: 30px;
   border-radius: 25px;
-}
-/*# sourceMappingURL=item.css.map */
+}/*# sourceMappingURL=item.css.map */
