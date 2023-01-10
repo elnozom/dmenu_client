@@ -2,7 +2,7 @@
     <div>
     <div v-if="loading" class="sub-group-skelton skelton" >
     </div>
-    <div v-else class="sub-group" :style="`background-image: url('${imgPath}${$store.getters['ui/mainGroup']}:${group.GroupCode}:Default.jpg');`">
+    <div v-else class="sub-group" :style="`background-image: url('${imgPath}${group.ImagePath}`">
         <h4>{{group.GroupName}}</h4>
     </div>
 

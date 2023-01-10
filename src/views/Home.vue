@@ -167,7 +167,7 @@ export default Vue.extend({
         setTimeout(() => {
           this.subGroupLoading = false
 
-        }, 1000);
+        }, 300);
       });
     },
     listItems() {
@@ -176,7 +176,7 @@ export default Vue.extend({
         this.items = items;
         setTimeout(() => {
           this.itemsLoading = false
-        }, 1000);
+        }, 300);
       });
     },
   },

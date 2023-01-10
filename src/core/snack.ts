@@ -10,6 +10,6 @@ export const openSnack = (Title: string, Msg: string) => {
   store.commit("ui/setSnack" , snack)
 }
 
-export const closeSnack = (Title: string, Msg: string) => {
+export const closeSnack = () => {
   store.commit("ui/stopSnack")
 }

@@ -3,7 +3,7 @@
     <div class="item-skelton skelton" v-if="loading"></div>
     <div class="item" v-else>
         <div class="img" >
-            <img :src="`${imgPath}${$store.getters['ui/mainGroup']}:${$store.getters['ui/subGroup']}:Default.jpg`" :alt="item.ItemName">
+            <img :src="`${imgPath}${item.ImagePath}`" :alt="item.ItemName">
         </div>
         <div class="info">
             <h3>{{item.ItemName}}</h3>
